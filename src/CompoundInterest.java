@@ -11,9 +11,9 @@ public class CompoundInterest {
 		
 		while(true) {
 			
-			double a = 0;
+			double a;
 			double r = 0.05;
-			int n = 0;
+			int n ;
 			int counter = 0;
 			double total = 0;
 		System.out.println();
@@ -32,18 +32,16 @@ public class CompoundInterest {
 		double period = input2.nextDouble();
 
 		
-		for(int i = 0; i < period ; i++) {
+		for(int i = 1; i < period ; i++) {
 			
+			a = monthlyEarnings * Math.pow ((1+r), i ); //instead of period as n, initialise i as 1 and use it as n so as to increase simultaneously with the counter
 			
-			
-			a = monthlyEarnings * Math.pow ((1+r), period );
-			
-			 total += a;
-			
+			total += a;
 			counter++;
-			
+		   
 			System.out.printf(  "Your balance at the end of year  %d is  %.2f %n", counter ,total);
-			
+			 
+			 
 		}
 		System.out.printf("%.2f",total);
 		
